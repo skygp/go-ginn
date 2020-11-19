@@ -1,0 +1,54 @@
+{"level":"info","ts":"2020-11-02T15:43:40.643+0800","caller":"ginn/main.go:20","msg":"Go service"}
+{"level":"info","ts":"2020-11-02T17:16:11.626+0800","caller":"config/type.go:60","msg":"WatchConfig failed"}
+{"level":"info","ts":"2020-11-02T17:16:31.156+0800","caller":"config/type.go:60","msg":"WatchConfig failed"}
+{"level":"info","ts":"2020-11-02T17:17:47.602+0800","caller":"config/type.go:60","msg":"WatchConfig failed"}
+{"level":"info","ts":"2020-11-02T17:18:26.056+0800","caller":"config/type.go:56","msg":"WatchConfig failed"}
+{"level":"info","ts":"2020-11-02T17:18:26.056+0800","caller":"config/type.go:62","msg":"WatchConfig failed"}
+{"level":"info","ts":"2020-11-02T17:18:36.942+0800","caller":"config/type.go:56","msg":"WatchConfig failed"}
+{"level":"info","ts":"2020-11-02T19:03:16.041+0800","caller":"core/middleware.go:16","msg":"method: GET     uri: /v1/user/login   time: 515.763µs"}
+{"level":"info","ts":"2020-11-02T19:03:41.945+0800","caller":"core/middleware.go:16","msg":"method: GET     uri: /v1/user/login   time: 367.471µs"}
+{"level":"info","ts":"2020-11-02T19:15:44.933+0800","caller":"core/middleware.go:36","msg":"/v1/user/login{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /v1/user/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {user-agent 15 0 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 <nil>} {errors 15 0  <nil>} {cost 8 496347  <nil>}"}
+{"level":"info","ts":"2020-11-02T19:15:48.254+0800","caller":"core/middleware.go:36","msg":"/v1/user/login{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /v1/user/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {user-agent 15 0 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 <nil>} {errors 15 0  <nil>} {cost 8 309358  <nil>}"}
+{"level":"info","ts":"2020-11-02T19:25:53.668+0800","caller":"core/middleware.go:36","msg":"/v1/user/login{status 11 200  <nil>} {method 15 0 GET <nil>} {path 15 0 /v1/user/login <nil>} {query 15 0  <nil>} {ip 15 0 127.0.0.1 <nil>} {user-agent 15 0 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 <nil>} {errors 15 0  <nil>} {cost 8 2054021  <nil>}"}
+{"level":"info","ts":"2020-11-03T11:16:43.285+0800","caller":"core/engine.go:48","msg":"Shutdown Server ..."}
+{"level":"info","ts":"2020-11-03T11:16:43.286+0800","caller":"core/engine.go:55","msg":"Server exiting"}
+{"level":"fatal","ts":"2020-11-03T11:16:43.285+0800","caller":"core/engine.go:41","msg":"listen: accept tcp [::]:9090: use of closed network connection\n"}
+2020-11-03T11:43:41.452+0800	info	core/engine.go:48	Shutdown Server ...
+2020-11-03T11:43:41.452+0800	fatal	core/engine.go:41	listen: accept tcp [::]:9090: use of closed network connection
+2020-11-03T11:43:41.454+0800	info	core/engine.go:55	Server exiting
+2020-11-03T12:03:52.734+0800	info	core/middleware.go:23	method: GET   uri: /v1/user/login   time: 1.710135ms   status: %!s(int=200)   ip: 127.0.0.1   query:
+2020-11-03T12:04:07.877+0800	info	core/engine.go:48	Shutdown Server ...
+2020-11-03T12:04:08.382+0800	fatal	core/engine.go:52	Server Shutdown:invalid argument
+{"level":"info","ts":"2020-11-03T13:40:40.519+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /v1/user/login   time: 770.529µs   status: %!s(int=200)   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-03T13:40:57.505+0800","caller":"core/engine.go:48","msg":"Shutdown Server ..."}
+{"level":"info","ts":"2020-11-03T13:40:57.505+0800","caller":"core/engine.go:55","msg":"Server exiting"}
+{"level":"fatal","ts":"2020-11-03T13:40:57.505+0800","caller":"core/engine.go:41","msg":"listen: accept tcp [::]:9090: use of closed network connection\n"}
+{"level":"info","ts":"2020-11-03T13:42:06.288+0800","caller":"core/engine.go:48","msg":"Shutdown Server ..."}
+{"level":"fatal","ts":"2020-11-03T13:42:06.288+0800","caller":"core/engine.go:41","msg":"listen: accept tcp [::]:9090: use of closed network connection\n"}
+{"level":"info","ts":"2020-11-03T13:42:06.288+0800","caller":"core/engine.go:55","msg":"Server exiting"}
+{"level":"fatal","ts":"2020-11-03T14:25:55.399+0800","caller":"core/engine.go:41","msg":"listen: net.Listen error: listen tcp: address 127.0.0.1::9090: too many colons in address\n"}
+{"level":"fatal","ts":"2020-11-03T14:37:04.772+0800","caller":"core/engine.go:41","msg":"listen: net.Listen error: listen tcp: address 127.0.0.1::9090: too many colons in address\n"}
+{"level":"info","ts":"2020-11-03T14:37:48.416+0800","caller":"core/engine.go:48","msg":"Shutdown Server ..."}
+{"level":"fatal","ts":"2020-11-03T14:37:48.416+0800","caller":"core/engine.go:41","msg":"listen: accept tcp [::]:9090: use of closed network connection\n"}
+{"level":"info","ts":"2020-11-03T14:37:48.417+0800","caller":"core/engine.go:55","msg":"Server exiting"}
+{"level":"info","ts":"2020-11-03T16:28:30.235+0800","caller":"core/engine.go:48","msg":"Shutdown Server ..."}
+{"level":"info","ts":"2020-11-03T16:28:30.237+0800","caller":"core/engine.go:55","msg":"Server exiting"}
+{"level":"fatal","ts":"2020-11-03T16:28:30.235+0800","caller":"core/engine.go:41","msg":"listen: accept tcp [::]:9090: use of closed network connection\n"}
+{"level":"info","ts":"2020-11-04T14:39:50.692+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /   time: 109.637µs   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:40:19.877+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/   time: 46.967µs   status: 404   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:41:08.916+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/index.html   time: 287.417µs   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:41:08.961+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/swagger-ui.css   time: 150.244µs   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:41:08.966+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/swagger-ui-standalone-preset.js   time: 399.138µs   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:41:08.985+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/swagger-ui-bundle.js   time: 21.650427ms   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:41:10.238+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/doc.json   time: 198.483µs   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:41:10.297+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/favicon-32x32.png   time: 4.681228ms   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:41:58.120+0800","caller":"core/engine.go:52","msg":"Shutdown Server ..."}
+{"level":"fatal","ts":"2020-11-04T14:41:58.121+0800","caller":"core/engine.go:45","msg":"listen: accept tcp [::]:9090: use of closed network connection\n"}
+{"level":"info","ts":"2020-11-04T14:41:58.121+0800","caller":"core/engine.go:59","msg":"Server exiting"}
+{"level":"info","ts":"2020-11-04T14:44:17.947+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/index.html   time: 353.054µs   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:44:17.971+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/swagger-ui.css   time: 146.724µs   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:44:17.972+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/swagger-ui-standalone-preset.js   time: 266.098µs   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:44:17.983+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/swagger-ui-bundle.js   time: 12.000395ms   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:44:18.043+0800","caller":"core/middleware.go:23","msg":"method: GET   uri: /swagger/doc.json   time: 209.17µs   status: 200   ip: 127.0.0.1   query:"}
+{"level":"info","ts":"2020-11-04T14:44:53.793+0800","caller":"core/engine.go:52","msg":"Shutdown Server ..."}
+{"level":"fatal","ts":"2020-11-04T14:44:54.296+0800","caller":"core/engine.go:56","msg":"Server Shutdown:invalid argument"}
