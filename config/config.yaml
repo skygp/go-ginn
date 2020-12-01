@@ -36,3 +36,10 @@ Auth:
   jwtExpire: 8760
   secretKey: "ginn12345678!EQWt@#$%^&*#!@#%ginn"
   coxFlag: "UserId"
+
+Email:
+  addr: "smtp.qq.com:25"
+  form: "ginn <1209371783@qq.com>"
+  username: "1209371783@qq.com"
+  password: "123456"
+  host: "smtp.qq.com"

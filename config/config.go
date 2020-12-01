@@ -22,6 +22,7 @@ type WebConfig struct {
 	Redis  RedisInfo  `mapstructure:"RedisInfo"`
 	QiNiu  QiNiuInfo  `mapstructure:"QiNiuInfo"`
 	Auth   Auth       `mapstructure:"Auth"`
+	Email  Email      `mapstructure:"email"`
 }
 
 type ServerInfo struct {
@@ -64,6 +65,13 @@ type Auth struct {
 	JwtExpire int    `mapstructure:"jwtExpire"`
 	SecretKey string `mapstructure:"secretKey"`
 	CoxFlag   string `mapstructure:"coxFlag"`
+}
+
+type Email struct {
+	Addr string     `mapstructure:"addr"`
+	Username string `mapstructure:"username"`
+	Password   string `mapstructure:"password"`
+	Host   string `mapstructure:"host"`
 }
 
 func NewWebConfig() (config *WebConfig) {
