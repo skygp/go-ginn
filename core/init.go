@@ -6,10 +6,8 @@ import (
 
 var (
 	Engine *gin.Engine
-	//Logger *zap.SugaredLogger
 )
 
 func init() {
 	Engine = NewEngine()
-	//Logger = logger.NewLogger(config.Gconfig.Server.Mode)
 }

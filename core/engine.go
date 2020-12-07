@@ -8,7 +8,7 @@ import (
 	"ginn/package/logger"
 	"ginn/package/snowflake"
 	"ginn/router"
-	errmsg "ginn/utils/code"
+	errMsg "ginn/utils/code"
 	"github.com/fvbock/endless"
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -34,7 +34,7 @@ func Start() {
 	RegisterGlobalMiddle()
 	RegisterRouters()
 	err = mysql.RegisterModelsAndMigrate()
-	errmsg.CheckMsgWithPanic(err)
+	errMsg.CheckMsgWithPanic(err)
 	PrintServerInfo()
 	RunEngine()
 }
@@ -44,7 +44,7 @@ func RunEngine() {
 	gin.SetMode(serverCfg.Mode)
 
 	err := snowflake.Init(serverCfg.StartTime, serverCfg.MachineId)
-	errmsg.CheckMsgWithPanic(err)
+	errMsg.CheckMsgWithPanic(err)
 
 	srv := endless.NewServer(serverCfg.Port, Engine)
 	go func() {
