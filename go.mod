@@ -16,6 +16,7 @@ require (
 	github.com/go-playground/validator/v10 v10.4.1 // indirect
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
+	github.com/gorilla/websocket v1.4.2
 	github.com/jinzhu/gorm v1.9.16 // indirect
 	github.com/jordan-wright/email v4.0.1-0.20200917010138-e1c00e156980+incompatible // indirect
 	github.com/lib/pq v1.8.0 // indirect
@@ -27,6 +28,7 @@ require (
 	github.com/onsi/gomega v1.10.3 // indirect
 	github.com/pelletier/go-toml v1.8.1 // indirect
 	github.com/qiniu/api.v7/v7 v7.6.0
+	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/viper v1.7.1
 	github.com/swaggo/gin-swagger v1.3.0
 	github.com/swaggo/swag v1.6.9

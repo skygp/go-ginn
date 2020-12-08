@@ -4,7 +4,8 @@ FROM golang:alpine AS builder
 ENV GO111MODULE=on \
     CGO_ENABLED=0 \
     GOOS=linux \
-    GOARCH=amd64
+    GOARCH=amd64 \
+    GOPROXY=https://goproxy.io
 
 # 移动到工作目录：/build
 WORKDIR /build
@@ -17,7 +18,7 @@ RUN go mod download
 # 将代码复制到容器中
 COPY . .
 
-# 将我们的代码编译成二进制可执行文件 bluebell_app
+# 将我们的代码编译成二进制可执行文件 ginn_app
 RUN go build -o ginn_app .
 
 ###################
@@ -28,7 +29,7 @@ FROM debian:stretch-slim
 COPY ./wait-for.sh /
 COPY ./templates /templates
 COPY ./static /static
-COPY ./conf /conf
+COPY ./config /config
 
 # 从builder镜像中把/dist/app 拷贝到当前目录
 COPY --from=builder /build/ginn_app /

@@ -7,6 +7,7 @@ import (
 	"ginn/config"
 	"ginn/package/logger"
 	"ginn/package/snowflake"
+	ws "ginn/package/websocket"
 	"ginn/router"
 	errMsg "ginn/utils/code"
 	"github.com/fvbock/endless"
@@ -36,6 +37,7 @@ func Start() {
 	err = mysql.RegisterModelsAndMigrate()
 	errMsg.CheckMsgWithPanic(err)
 	PrintServerInfo()
+	go ws.WebsocketManager.Start()
 	RunEngine()
 }
 
@@ -86,6 +88,7 @@ func RegisterRouters() {
 	v1 := Engine.Group("/v1")
 	router.NewRegisterUser(v1)
 	router.NewRegisterFile(v1)
+	router.NewRegisterWS(v1)
 }
 
 func RegisterGlobalMiddle() {
