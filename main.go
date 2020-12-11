@@ -7,6 +7,11 @@ import (
 	"ginn/package/logger"
 )
 
+/*
+- Ginn-QQ群: 458314077
+- 作者QQ:    1209371783
+- 加群与加好友备注: ginn，谢谢！
+ */
 func main() {
 
 	defer mysql.CloseDb()

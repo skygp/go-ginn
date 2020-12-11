@@ -31,7 +31,7 @@ func Start() {
 	var err error
 	Engine.SetFuncMap(RegisterTemplateFunc())
 	Engine.Static("/static", "static")
-	Engine.LoadHTMLGlob("template/*")
+	Engine.LoadHTMLGlob("templates/*")
 	RegisterGlobalMiddle()
 	RegisterRouters()
 	err = mysql.RegisterModelsAndMigrate()
@@ -108,12 +108,14 @@ func PrintServerInfo() {
   \\_|| || || \|| || \||
     ____________________
                         `+
-		"\nServerName: %s \nVersion: %s \nDesc: %s \nUrl: http://%s%s \nMode: %s",
+		"\nServerName: %s \nVersion: %s \nDesc: %s \nUrl: http://%s%s \nMode: %s \nAuthorQQ: %s \nGroupQQ: %s ",
 		serverCfg.Name,
 		serverCfg.Version,
 		serverCfg.Desc,
 		serverCfg.Host,
 		serverCfg.Port,
 		serverCfg.Mode,
+		"1209371783",
+		"458314077",
 	)
 }

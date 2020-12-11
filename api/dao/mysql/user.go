@@ -2,7 +2,6 @@ package mysql
 
 import (
 	"errors"
-	"fmt"
 	"ginn/api/models"
 	errMsg "ginn/utils/code"
 )
@@ -14,7 +13,6 @@ func CreateUser(user *models.RequestRegisterUser) (err error) {
 	obj.Email = user.Email
 	obj.Role = 1
 	err = db.Create(&obj).Error
-	fmt.Printf("CreateUser 1 err:%v \n", err)
 	return
 }
 

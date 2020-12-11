@@ -16,7 +16,7 @@ services:
     image: "redis:5.0.7"
     ports:
       - "26379:6379"
-  bluebell_app:
+  ginn_app:
     build: .
     command: sh -c "./wait-for.sh mysql8019:3306 redis507:6379 -- ./ginn_app ./conf/config.yaml"
     depends_on:

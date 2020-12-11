@@ -95,7 +95,6 @@ func (c *Client) Write() {
 
 // 启动 websocket 管理器
 func (manager *Manager) Start() {
-	log.Printf("websocket manage start")
 	for {
 		select {
 		// 注册
