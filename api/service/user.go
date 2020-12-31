@@ -37,6 +37,32 @@ func LoginUser(user *models.RequestLoginUser) (token string, err error) {
 	if nil != err {
 		return
 	}
-	err = redis.SetKey(token, resultUser.Uid, time.Duration(config.Gconfig.Auth.JwtExpire))
+	err = redis.SetKey(token, resultUser.Uid, time.Duration(config.Gconfig.Auth.JwtExpire) * time.Second)
+	return
+}
+
+func GetUserInfo(token string)(role, userName string, err error)  {
+	var (
+		uid string
+		resultUser *models.DbUser
+	)
+	uid, err = redis.GetKey(token)
+	if nil != err{
+		return "","",errors.New(errMsg.ReturnCodeMsg(errMsg.CodeInvalidToken))
+	}
+	resultUser, err = mysql.FindUid(uid)
+	if nil != err{
+		return "","",errors.New(errMsg.ReturnCodeMsg(errMsg.CodeUserNotExist))
+	}
+	role = models.GetRole(resultUser.Role)
+	userName = resultUser.UserName
+	return
+}
+
+func Logout(token string) (err error) {
+	err = redis.DelKey(token)
+	if nil != err{
+		return errors.New(errMsg.ReturnCodeMsg(errMsg.CodeInvalidToken))
+	}
 	return
 }

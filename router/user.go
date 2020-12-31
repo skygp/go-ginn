@@ -10,5 +10,7 @@ func NewRegisterUser(v *gin.RouterGroup) {
 	{
 		userGroup.POST("/login", user.PostLogin)
 		userGroup.POST("/register", user.PostRegister)
+		userGroup.POST("/userInfo", user.PostUserInfo)
+		userGroup.POST("/logout", user.PostLogout)
 	}
 }

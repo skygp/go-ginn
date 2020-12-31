@@ -6,6 +6,15 @@ import (
 	"gorm.io/gorm"
 )
 
+var roles = map[int]string{
+	1:"admin",
+	0:"ordinary",
+}
+
+func GetRole(code int) string {
+	return roles[code]
+}
+
 type DbUser struct {
 	gorm.Model
 	Uid      int64  `gorm:"primaryKey;column:uid"  json:"-"`

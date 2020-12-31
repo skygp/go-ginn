@@ -33,3 +33,12 @@ func FindUserName(username string) (resultUser *models.DbUser, err error) {
 	}
 	return
 }
+
+func FindUid(uid string) (resultUser *models.DbUser, err error) {
+	resultUser = new(models.DbUser)
+	tx := db.Where("uid = ?", uid).First(resultUser)
+	if tx.Error != nil {
+		return nil, errors.New(errMsg.ReturnCodeMsg(errMsg.CodeUserNotExist))
+	}
+	return
+}

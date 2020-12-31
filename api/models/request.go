@@ -13,3 +13,7 @@ type RequestRegisterUser struct {
 	Email string `json:"email" form:"email" binding:"required"`
 	*BaseUser
 }
+
+type RequestGetToken struct {
+	Token string `json:"token" form:"token" binding:"required"`
+}
